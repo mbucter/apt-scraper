@@ -37,4 +37,3 @@ class Parser:
             price = float(info.find("div", {"class": "price"}).find("span").string.replace("$", ""))
             avail = info.find("div", {"class": "availability"}).string
             date_str = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
-
