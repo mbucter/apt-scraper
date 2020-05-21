@@ -21,5 +21,6 @@ setup(
         "pandas >= 1.0.3",
         "bs4",
         "requests",
-    ]
+    ],
+    entry_points={"console_scripts": ["apt_scraper=apt_scraper.extract.extract"]}
 )
