@@ -10,7 +10,7 @@ SITES = [
     "avalon-campbell",
 ]
 
-def do_extract():
+def extract():
     rh = RequestHTML()
     for site in SITES:
         for br in BEDROOMS:
