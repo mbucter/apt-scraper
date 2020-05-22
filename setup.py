@@ -8,7 +8,7 @@ from setuptools import find_packages, setup
 _VER = "0.1.0"
 
 setup(
-    name="apt_scraper",
+    name="apt-scraper",
     url="https://github.com/mbucter/apt-scraper",
     version=_VER,
     description="Scrape apartment prices.",
@@ -22,5 +22,5 @@ setup(
         "bs4",
         "requests",
     ],
-    entry_points={"console_scripts": ["apt_scraper=apt_scraper.extract.extract"]}
+    entry_points={"console_scripts": ["apt-scraper=apt_scraper.extract:extract"]}
 )
