@@ -1,3 +1,4 @@
+from time import sleep
 from apt_scraper.request_html import RequestHTML
 
 
@@ -13,6 +14,7 @@ SITES = [
 def extract():
     rh = RequestHTML()
     for site in SITES:
-        for br in BEDROOMS:
-            rh.get_html(site, br)
-            rh.save_html(site)
+        for bd in BEDROOMS:
+            rh.get_html(site, bd)
+            rh.save_html(site, bd)
+            sleep(1.5)
