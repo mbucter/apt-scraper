@@ -18,6 +18,6 @@ def transform():
         new_date = f"{month}/{day}/{year}"
         path = os.path.join(base_path, file)
         curr_df = p.price_dataframe(path, new_date, bd)
-        pd.concat([df, curr_df])
+        df = pd.concat([df, curr_df])
 
     df.to_csv("/home/pi/apt-scraper/price_data.csv")
