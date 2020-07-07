@@ -1,5 +1,6 @@
 from time import sleep
 from apt_scraper.request_html import RequestHTML
+from apt_scraper.transform import transform
 
 
 BEDROOMS = [
@@ -18,3 +19,4 @@ def extract():
             rh.get_html(site, bd)
             rh.save_html(site, bd)
             sleep(1.5)
+    transform()
