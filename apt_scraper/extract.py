@@ -13,10 +13,10 @@ SITES = [
 ]
 
 def extract():
+    rh = RequestHTML()
+    for site in SITES:
+        for bd in BEDROOMS:
+            rh.get_html(site, bd)
+            rh.save_html(site, bd)
+            sleep(1.5)
     transform()
-    # rh = RequestHTML()
-    # for site in SITES:
-    #     for bd in BEDROOMS:
-    #         rh.get_html(site, bd)
-    #         rh.save_html(site, bd)
-    #         sleep(1.5)
